@@ -65,6 +65,7 @@ Independent variables, in linear regression is denoted as a vector  X_i
 Dependent variable, in the linear regression denoted as a scalar Y_(i .)
 error terms, In linear regression denoted as a scalar .e_i
 Simple linear regression model shows the specification that the dependent variable,  y_i  is a linear combination of the parameter. In simple linear regression for getting  n data points there is one independent variable: 〗x_i, and two unknown parameters,  β_0  and β_1:
+
 straight line equation:
 y_i=β_0+β_1 x_i+ε_i,    i=1,2,……,n
 
