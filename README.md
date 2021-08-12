@@ -11,30 +11,43 @@ When the most contributed World development indicators which tell us about count
 
 ## Model 2. Autoregressive (AR)
 Autoregressive modelling is training a regression model on the value of response variable itself. Autoregressive is made of the word, Auto and Regressive which represents the linear regression on itself (auto). In context of time-series forecasting, autoregressive modelling will mean creating the model where the response variable Y will depend upon the previous values of Y at a pre-determined constant time lag. The time lag can be daily (or 2, 3, 4… days), weekly, monthly etc.
+
 Y_t=β_0+β_1*Y_(t-1)+error
 
 In the above model, the value at the last time lag is taken. If the time lag is weekly, the
  Y_t-1 will represent the value of Y of the last week. Such an AR models where the value of response variable of just one time lag is taken are called as AR models of first model or AR (1) models.AR models have the parameter termed as p. The parameter p represents the previous values of p number of time lags when training the model. The AR model of 2nd order will have the value of response variable at any particular time depend upon the values of last two lags. Thus, AR (2) model will look like the following:
  
 Y_t=β_0+β_1*Y_(t-1)+β_2*Y_(t-2)+error.
+
 Generalizing the above for p, the AR (p) model will look like the following:
+
 Y_t=β_0+β_1*Y_(t-1)+β_2*Y_(t-2)+⋯+β_p*Y_(t-p)+error
+
 
 ## Model 3. Double exponential smoothing
 This smoothing method start with setting S2 to y1, where Si stands for smoothing observation , and y is original observation. And the time periods is , 1,2,…,n. For the 3rd  period,
+
  S3=αy2+(1-α)S2;
+ 
  and it continued ..
 For every time period the smoothing as follows:
+
 St=αyt-1+(1-α)St-10<α≤1t≥3.
+
 This is the model of exponential smoothing and  α is smoothing constant.
 
 ## Model 4. Triple Exponential Smoothing
  In double exponential smoothing will not applicable. For controlling such situation we need to introduce seasonality . and the equation called as the Holt Winter method.
 The basic holt winter equation:
-St=a  y_t/I_(t-L) +(1-a)(S_(t-1)+b_(t-1))………overall exponential smoothing
-b_t=γ(S_t-S_(t-1) )+(1-γ)b_(t-1)      …………. trend exponential smoothing
-I_t=β y_t/S_t +(1-β)I_(t-L)        …………..seasonal exponential smoothing
-F_(t+m)=〖(S〗_t+mbt)I_(t-L)+m         …. …..  ……..exponential forecast,
+
+ St=a  y_t/I_(t-L) +(1-a)(S_(t-1)+b_(t-1))………overall exponential smoothing
+
+ b_t=γ(S_t-S_(t-1) )+(1-γ)b_(t-1)      …………. trend exponential smoothing
+
+ I_t=β y_t/S_t +(1-β)I_(t-L)        …………..seasonal exponential smoothing
+
+ F_(t+m)=〖(S〗_t+mbt)I_(t-L)+m         …. …..  ……..exponential forecast,
+
 
 where
 •	y is observation
@@ -52,5 +65,6 @@ Independent variables, in linear regression is denoted as a vector  X_i
 Dependent variable, in the linear regression denoted as a scalar Y_(i .)
 error terms, In linear regression denoted as a scalar .e_i
 Simple linear regression model shows the specification that the dependent variable,  y_i  is a linear combination of the parameter. In simple linear regression for getting  n data points there is one independent variable: 〗x_i, and two unknown parameters,  β_0  and β_1:
-straight line equation: y_i=β_0+β_1 x_i+ε_i,    i=1,2,……,n
+straight line equation:
+y_i=β_0+β_1 x_i+ε_i,    i=1,2,……,n
 
